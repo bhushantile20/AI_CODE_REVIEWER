@@ -20,8 +20,13 @@ function App() {
     prism.highlightAll()
   }, [])
 
-  async function reviewCode() {
-    const response = await axios.post('http://localhost:3000/ai/get-review', { code })
+  // async function reviewCode() {
+  //   const response = await axios.post('http://localhost:3000/ai/get-review', { code })
+  //   setReview(response.data)
+  // }
+
+    async function reviewCode() {
+    const response = await axios.post('https://refactron-1.onrender.com', { code })
     setReview(response.data)
   }
 
